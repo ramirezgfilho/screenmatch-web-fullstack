@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}"
+>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Cadastro de filme</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <title>Cadastro de Filme</title>
 </head>
-<body>
-    <H1>Cadastro de filmes</H1>
-    <section>
-    <form method="post">
 
-        <br>
-        <label for="nome">Nome:</label>
-        <input id="nome" name="nome">
-        <br>
-        <label for="duracao">Duração:</label>
-        <input id="duracao" name="duracao">
-        <br>
-        <label for="ano">Ano de lançamento:</label>
-        <input id="ano" name="ano">
-        <br>
-        <label for="genero">Gênero:</label>
-        <input id="genero" name="genero">
-        <br>
+<body>
+<div layout:fragment="conteudo" >
+    <H1>Cadastro de filme</H1>
+    <section>
+    <form method="post" action="/filmes">
+
+        <div>
+            <label for="nome">Nome:</label>
+            <input id="nome" name="nome">
+        </div>
+        <div>
+            <label for="duracaoEmMinutos">Duração (em minutos):</label>
+            <input id="duracaoEmMinutos" name="duracaoEmMinutos">
+        </div>
+        <div>
+            <label for="anoLancamento">Ano de lançamento:</label>
+            <input id="anoLancamento" name="anoLancamento">
+        </div>
+        <div>
+            <label for="genero">Gênero:</label>
+            <input id="genero" name="genero">
+        </div>
         <input type="submit" value="Cadastrar">
     </form>
     </section>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+</div>
 </body>
 </html>

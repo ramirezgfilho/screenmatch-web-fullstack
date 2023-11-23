@@ -9,8 +9,8 @@ public class Filme {
 
     public Filme(DadosCadastroFilme dados){
         this.nome = dados.nome();
-        this.duracaoEmMinutos = dados.duracao();
-        this.anoLancamento = dados.ano();
+        this.duracaoEmMinutos = dados.duracaoEmMinutos();
+        this.anoLancamento = dados.anoLancamento();
         this.genero = dados.genero();
     }
 
