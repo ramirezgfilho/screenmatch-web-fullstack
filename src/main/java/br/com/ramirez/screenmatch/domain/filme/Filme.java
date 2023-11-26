@@ -1,7 +1,14 @@
 package br.com.ramirez.screenmatch.domain.filme;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "filmes")
 public class Filme {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private Integer duracaoEmMinutos;
     private Integer anoLancamento;
@@ -13,6 +20,8 @@ public class Filme {
         this.anoLancamento = dados.anoLancamento();
         this.genero = dados.genero();
     }
+
+    public Filme() {}
 
     @Override
     public String toString() {
@@ -54,5 +63,9 @@ public class Filme {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
