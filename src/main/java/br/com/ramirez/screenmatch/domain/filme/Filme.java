@@ -68,4 +68,11 @@ public class Filme {
     public Long getId() {
         return id;
     }
+
+    public void atualizaDados(DadosAlteracaoFilme dados) {
+        this.nome = dados.nome();
+        this.duracaoEmMinutos = dados.duracaoEmMinutos();
+        this.anoLancamento = dados.anoLancamento();
+        this.genero = dados.genero();
+    }
 }
