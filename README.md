@@ -1,4 +1,4 @@
 # screenmatch
 
-simple CRUD application utilizing Java, Spring Boot, Thymeleaf, JPA and mysql. 
+CRUD application utilizing Java, Spring Boot, Thymeleaf, JPA and mysql. 
 
